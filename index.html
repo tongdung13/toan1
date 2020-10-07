@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tien te</title>
+</head>
+<body>
+<form>
+    <p>Amount  &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   &nbsp &nbsp From Currency &nbsp &nbsp &nbsp      To Currency</p>
+    <input type="text" id="Amount">
+    <select id="FromCurrency">
+    <option value="23000">Vnđ</option>
+    <option value="1">Usd</option>
+</select>
+    <select id="ToCurrency">
+    <option value="1">Usđ</option>
+    <option value="23000">Vnđ</option>
+</select>
+    <input type="button" value="convert" onclick="convert()">
+    <p id="kq"></p>
+</form>
+
+<script>
+    function convert(){
+        let amount = document.getElementById("Amount").value;
+        let fromCurrency = document.getElementById("FromCurrency").value;
+        let toCurrency = document.getElementById("ToCurrency").value;
+        let romen = amount * fromCurrency / toCurrency
+        console.log(romen);
+        document.getElementById("kq").innerHTML = "kq: " + romen;
+    }
+</script>
+</body>
+</html>
